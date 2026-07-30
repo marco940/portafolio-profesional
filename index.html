@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio profesional de Marco Ulises Flores Chona, desarrollador FullStack e ingeniero en Sistemas Inteligentes.">
+  <meta name="description" content="Portafolio profesional de Marco Ulises Flores Chona: desarrollo web, inteligencia artificial, visión por computadora, automatización y proyectos con Arduino.">
+  <meta name="author" content="Marco Ulises Flores Chona">
+  <meta name="theme-color" content="#020711">
+  <meta property="og:title" content="Marco Flores | Portafolio">
+  <meta property="og:description" content="Desarrollo web, inteligencia artificial, visión por computadora y soluciones tecnológicas.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23020711%22/><text x=%2250%22 y=%2265%22 font-size=%2250%22 text-anchor=%22middle%22 fill=%22%234fdcff%22 font-family=%22Arial%22 font-weight=%22700%22>MF</text></svg>">
   <title>Marco Flores | Portafolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,13 +35,19 @@
       <a href="#sobre-mi"><i class="fa-solid fa-user"></i> Sobre mí</a>
       <a href="#proyectos"><i class="fa-solid fa-folder"></i> Proyectos</a>
       <a href="#habilidades"><i class="fa-solid fa-code"></i> Habilidades</a>
+      <a href="#experiencia"><i class="fa-solid fa-briefcase"></i> Experiencia</a>
       <a href="#certificaciones"><i class="fa-solid fa-award"></i> Certificaciones</a>
       <a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a>
     </nav>
 
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+    <div class="header-actions">
+      <button class="theme-btn" id="themeBtn" aria-label="Cambiar tema" title="Cambiar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
   </header>
 
   <main>
@@ -45,9 +57,9 @@
         <h1>
           Hola, soy
           <span>Marco Ulises</span>
-          
+          Flores Chona
         </h1>
-        <p class="role">INGENIERO EN SISTEMAS INTELIGENTES</p>
+        <p class="role"><span id="typedRole">INGENIERO EN SISTEMAS INTELIGENTES</span><span class="typing-cursor">|</span></p>
         <p class="intro">
           Desarrollador FullStack enfocado en inteligencia artificial, visión por computadora
           y creación de soluciones tecnológicas para problemas reales.
@@ -57,13 +69,13 @@
           <a class="btn btn-primary" href="#proyectos">
             <i class="fa-solid fa-rocket"></i> Ver proyectos
           </a>
-          <a class="btn btn-outline" href="#" onclick="alert('Aquí agregaremos tu CV en PDF.'); return false;">
-            <i class="fa-solid fa-download"></i> Descargar CV
+          <a class="btn btn-outline" href="#contacto">
+            <i class="fa-solid fa-briefcase"></i> Contactarme
           </a>
         </div>
 
         <div class="social-links">
-          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://github.com/marco940" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
           <a href="mailto:marco.flores.chona@gmail.com" aria-label="Correo"><i class="fa-solid fa-envelope"></i></a>
           <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
@@ -107,7 +119,7 @@
           <div class="project-content">
             <div class="project-topline">
               <h3>OCR con IA</h3>
-              <a href="#" aria-label="Abrir proyecto OCR"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <button class="project-open" data-project="ocr" aria-label="Ver detalles del proyecto OCR"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
             </div>
             <h4>Lectura de placas y documentos</h4>
             <p>Sistema inteligente para detectar y extraer texto de placas vehiculares, INE y documentos.</p>
@@ -122,7 +134,7 @@
           <div class="project-content">
             <div class="project-topline">
               <h3>Punto de Venta</h3>
-              <a href="#" aria-label="Abrir proyecto punto de venta"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <button class="project-open" data-project="pos" aria-label="Ver detalles del punto de venta"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
             </div>
             <h4>Cafetería Mil Aromas</h4>
             <p>Gestión de clientes, compras, abonos, estados de cuenta, reportes y tickets térmicos.</p>
@@ -137,7 +149,7 @@
           <div class="project-content">
             <div class="project-topline">
               <h3>Retroalimentación</h3>
-              <a href="#" aria-label="Abrir sistema de retroalimentación"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <button class="project-open" data-project="feedback" aria-label="Ver detalles del sistema de retroalimentación"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
             </div>
             <h4>Sistema anónimo</h4>
             <p>Plataforma para recibir opiniones anónimas y consultarlas desde un panel administrativo.</p>
@@ -152,7 +164,7 @@
           <div class="project-content">
             <div class="project-topline">
               <h3>Robot 2WD</h3>
-              <a href="#" aria-label="Abrir proyecto robot"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <button class="project-open" data-project="robot" aria-label="Ver detalles del robot 2WD"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
             </div>
             <h4>Control por Bluetooth</h4>
             <p>Robot móvil controlado desde una aplicación mediante Bluetooth, Arduino UNO y L298N.</p>
@@ -189,6 +201,40 @@
       </article>
     </section>
 
+
+    <section class="section experience-section" id="experiencia">
+      <div class="section-heading reveal">
+        <div>
+          <span class="kicker"><i class="fa-solid fa-circle"></i> EXPERIENCIA</span>
+          <h2>Mi trayectoria profesional</h2>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <span class="timeline-date">2026 – Actualidad</span>
+          <div class="timeline-card">
+            <h3>Docente de IA y Programación</h3>
+            <p>Enseñanza de algoritmos, Python, inteligencia artificial, visión por computadora y desarrollo de proyectos tecnológicos en bachillerato.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-date">2024 – Actualidad</span>
+          <div class="timeline-card">
+            <h3>Desarrollador Freelance</h3>
+            <p>Diseño y desarrollo de sistemas web, automatizaciones y soluciones personalizadas para negocios y proyectos educativos.</p>
+          </div>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-date">2023 – 2025</span>
+          <div class="timeline-card">
+            <h3>Desarrollador FullStack · Globaltek</h3>
+            <p>Participación en desarrollo web, integración de interfaces, bases de datos, mantenimiento y resolución de incidencias técnicas.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section glass-card reveal" id="certificaciones">
       <span class="kicker">FORMACIÓN CONTINUA</span>
       <h2>Certificaciones y diplomados</h2>
@@ -216,6 +262,38 @@
   <footer>
     <p>© <span id="year"></span> Marco Ulises Flores Chona. Portafolio profesional.</p>
   </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close-modal aria-label="Cerrar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <span class="kicker" id="modalKicker">PROYECTO</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="modal-columns">
+        <div>
+          <h3>Funciones principales</h3>
+          <ul id="modalFeatures"></ul>
+        </div>
+        <div>
+          <h3>Tecnologías</h3>
+          <div class="tags" id="modalTags"></div>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <a class="btn btn-primary" href="https://github.com/marco940" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github"></i> Ver GitHub
+        </a>
+        <button class="btn btn-outline" data-close-modal>Cerrar</button>
+      </div>
+    </article>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

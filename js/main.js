@@ -94,3 +94,134 @@ addEventListener('resize', () => {
   resizeCanvas();
   createParticles();
 });
+
+
+// Texto rotativo del encabezado
+const roles = [
+  'INGENIERO EN SISTEMAS INTELIGENTES',
+  'DESARROLLADOR FULLSTACK',
+  'DOCENTE DE IA Y PROGRAMACIÓN',
+  'CREADOR DE SOLUCIONES TECNOLÓGICAS'
+];
+const typedRole = document.getElementById('typedRole');
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeRole() {
+  if (!typedRole) return;
+  const current = roles[roleIndex];
+  typedRole.textContent = deleting
+    ? current.slice(0, charIndex--)
+    : current.slice(0, charIndex++);
+
+  let delay = deleting ? 38 : 72;
+  if (!deleting && charIndex > current.length) {
+    deleting = true;
+    delay = 1400;
+  } else if (deleting && charIndex < 0) {
+    deleting = false;
+    roleIndex = (roleIndex + 1) % roles.length;
+    charIndex = 0;
+    delay = 350;
+  }
+  setTimeout(typeRole, delay);
+}
+typeRole();
+
+// Tema claro/oscuro persistente
+const themeBtn = document.getElementById('themeBtn');
+const savedTheme = localStorage.getItem('portfolio-theme');
+if (savedTheme === 'light') document.body.classList.add('light-theme');
+
+function updateThemeIcon() {
+  if (!themeBtn) return;
+  themeBtn.innerHTML = document.body.classList.contains('light-theme')
+    ? '<i class="fa-solid fa-sun"></i>'
+    : '<i class="fa-solid fa-moon"></i>';
+}
+updateThemeIcon();
+
+themeBtn?.addEventListener('click', () => {
+  document.body.classList.toggle('light-theme');
+  localStorage.setItem(
+    'portfolio-theme',
+    document.body.classList.contains('light-theme') ? 'light' : 'dark'
+  );
+  updateThemeIcon();
+});
+
+// Botón volver arriba
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop?.classList.toggle('visible', scrollY > 600);
+});
+backToTop?.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+
+// Modal de detalles de proyectos
+const projectData = {
+  ocr: {
+    kicker: 'INTELIGENCIA ARTIFICIAL',
+    title: 'OCR para placas y documentos',
+    description: 'Aplicación de visión por computadora que procesa imágenes, mejora su legibilidad y extrae texto para reconocer placas vehiculares, documentos e identificaciones.',
+    features: ['Carga y procesamiento de imágenes', 'Preprocesamiento con OpenCV', 'Reconocimiento mediante Tesseract OCR', 'Limpieza y validación del texto obtenido'],
+    tags: ['Python', 'OpenCV', 'Tesseract', 'Visión artificial']
+  },
+  pos: {
+    kicker: 'DESARROLLO WEB',
+    title: 'Punto de venta para cafetería',
+    description: 'Sistema web creado para administrar clientes con cuenta, registrar compras y abonos, consultar adeudos y generar estados de cuenta y tickets.',
+    features: ['Perfiles de clientes', 'Compras a crédito y abonos', 'Historial y estados de cuenta', 'Reportes y tickets térmicos'],
+    tags: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript']
+  },
+  feedback: {
+    kicker: 'PLATAFORMA WEB',
+    title: 'Retroalimentación anónima',
+    description: 'Herramienta para que estudiantes envíen comentarios anónimos y el administrador consulte las respuestas desde un panel privado.',
+    features: ['Envío anónimo', 'Panel administrativo', 'Persistencia en base de datos', 'Interfaz responsive estilo IA'],
+    tags: ['PHP', 'MySQL', 'HTML', 'CSS']
+  },
+  robot: {
+    kicker: 'ROBÓTICA',
+    title: 'Robot Arduino 2WD por Bluetooth',
+    description: 'Vehículo móvil construido con Arduino UNO, puente H L298N y módulo HC-05 para controlarlo inalámbricamente desde un teléfono.',
+    features: ['Movimiento adelante y atrás', 'Giros izquierda y derecha', 'Control mediante Bluetooth', 'Diseño para competencia de robot fútbol'],
+    tags: ['Arduino', 'C++', 'L298N', 'HC-05']
+  }
+};
+
+const modal = document.getElementById('projectModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalKicker = document.getElementById('modalKicker');
+const modalDescription = document.getElementById('modalDescription');
+const modalFeatures = document.getElementById('modalFeatures');
+const modalTags = document.getElementById('modalTags');
+
+function openProjectModal(key) {
+  const data = projectData[key];
+  if (!data || !modal) return;
+  modalTitle.textContent = data.title;
+  modalKicker.textContent = data.kicker;
+  modalDescription.textContent = data.description;
+  modalFeatures.innerHTML = data.features.map(item => `<li>${item}</li>`).join('');
+  modalTags.innerHTML = data.tags.map(tag => `<span>${tag}</span>`).join('');
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+  modal?.classList.remove('open');
+  modal?.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.project-open').forEach(button => {
+  button.addEventListener('click', () => openProjectModal(button.dataset.project));
+});
+document.querySelectorAll('[data-close-modal]').forEach(button => {
+  button.addEventListener('click', closeProjectModal);
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeProjectModal();
+});
