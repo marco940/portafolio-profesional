@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio profesional de Marco Ulises Flores Chona, desarrollador FullStack e ingeniero en Sistemas Inteligentes.">
+  <title>Marco Flores | Portafolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <header class="topbar">
+    <a href="#inicio" class="brand" aria-label="Ir al inicio">
+      <span class="brand-mark">MF</span>
+      <span class="brand-text">
+        <strong>MARCO FLORES</strong>
+        <small>PORTAFOLIO</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a class="active" href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a>
+      <a href="#sobre-mi"><i class="fa-solid fa-user"></i> Sobre mí</a>
+      <a href="#proyectos"><i class="fa-solid fa-folder"></i> Proyectos</a>
+      <a href="#habilidades"><i class="fa-solid fa-code"></i> Habilidades</a>
+      <a href="#certificaciones"><i class="fa-solid fa-award"></i> Certificaciones</a>
+      <a href="#contacto"><i class="fa-solid fa-envelope"></i> Contacto</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><i class="fa-solid fa-circle"></i> BIENVENIDO A MI PORTAFOLIO</span>
+        <h1>
+          Hola, soy
+          <span>Marco Ulises</span>
+          
+        </h1>
+        <p class="role">INGENIERO EN SISTEMAS INTELIGENTES</p>
+        <p class="intro">
+          Desarrollador FullStack enfocado en inteligencia artificial, visión por computadora
+          y creación de soluciones tecnológicas para problemas reales.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos">
+            <i class="fa-solid fa-rocket"></i> Ver proyectos
+          </a>
+          <a class="btn btn-outline" href="#" onclick="alert('Aquí agregaremos tu CV en PDF.'); return false;">
+            <i class="fa-solid fa-download"></i> Descargar CV
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:marco.flores.chona@gmail.com" aria-label="Correo"><i class="fa-solid fa-envelope"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="availability"><span></span> Disponible para nuevos proyectos</div>
+        <div class="photo-frame">
+          <img src="img/perfil-marco.jpeg" alt="Fotografía profesional de Marco Ulises Flores Chona">
+        </div>
+        <div class="floating-card">
+          <i class="fa-solid fa-code"></i>
+          <div><strong>15+ proyectos</strong><span>completados</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats reveal" aria-label="Estadísticas profesionales">
+      <article><i class="fa-regular fa-calendar"></i><div><strong>5+</strong><span>Años aprendiendo</span></div></article>
+      <article><i class="fa-solid fa-code"></i><div><strong>15+</strong><span>Proyectos</span></div></article>
+      <article><i class="fa-solid fa-user-group"></i><div><strong>2+</strong><span>Años de experiencia</span></div></article>
+      <article><i class="fa-solid fa-rocket"></i><div><strong>100%</strong><span>Comprometido</span></div></article>
+      <article><i class="fa-solid fa-brain"></i><div><strong>IA</strong><span>Mi pasión</span></div></article>
+    </section>
+
+    <section class="section projects-section" id="proyectos">
+      <div class="section-heading reveal">
+        <div>
+          <span class="kicker"><i class="fa-solid fa-circle"></i> PROYECTOS DESTACADOS</span>
+          <h2>Soluciones que he desarrollado</h2>
+        </div>
+        <a href="#todos">Ver todos los proyectos <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="projects-grid" id="todos">
+        <article class="project-card reveal">
+          <div class="project-image project-ocr">
+            <span class="project-icon"><i class="fa-solid fa-camera"></i></span>
+          </div>
+          <div class="project-content">
+            <div class="project-topline">
+              <h3>OCR con IA</h3>
+              <a href="#" aria-label="Abrir proyecto OCR"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <h4>Lectura de placas y documentos</h4>
+            <p>Sistema inteligente para detectar y extraer texto de placas vehiculares, INE y documentos.</p>
+            <div class="tags"><span>Python</span><span>OpenCV</span><span>Tesseract</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image project-pos">
+            <span class="project-icon"><i class="fa-solid fa-mug-hot"></i></span>
+          </div>
+          <div class="project-content">
+            <div class="project-topline">
+              <h3>Punto de Venta</h3>
+              <a href="#" aria-label="Abrir proyecto punto de venta"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <h4>Cafetería Mil Aromas</h4>
+            <p>Gestión de clientes, compras, abonos, estados de cuenta, reportes y tickets térmicos.</p>
+            <div class="tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image project-feedback">
+            <span class="project-icon"><i class="fa-solid fa-chart-column"></i></span>
+          </div>
+          <div class="project-content">
+            <div class="project-topline">
+              <h3>Retroalimentación</h3>
+              <a href="#" aria-label="Abrir sistema de retroalimentación"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <h4>Sistema anónimo</h4>
+            <p>Plataforma para recibir opiniones anónimas y consultarlas desde un panel administrativo.</p>
+            <div class="tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-image project-robot">
+            <span class="project-icon"><i class="fa-solid fa-robot"></i></span>
+          </div>
+          <div class="project-content">
+            <div class="project-topline">
+              <h3>Robot 2WD</h3>
+              <a href="#" aria-label="Abrir proyecto robot"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            <h4>Control por Bluetooth</h4>
+            <p>Robot móvil controlado desde una aplicación mediante Bluetooth, Arduino UNO y L298N.</p>
+            <div class="tags"><span>Arduino</span><span>C++</span><span>HC-05</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about-grid" id="sobre-mi">
+      <article class="glass-card reveal">
+        <span class="kicker">SOBRE MÍ</span>
+        <h2>Creo tecnología útil</h2>
+        <p>
+          Soy ingeniero en Sistemas Inteligentes, docente de inteligencia artificial y programación,
+          desarrollador web y técnico en soporte. Disfruto convertir necesidades reales en sistemas
+          funcionales, claros y fáciles de usar.
+        </p>
+      </article>
+
+      <article class="glass-card reveal" id="habilidades">
+        <span class="kicker">HABILIDADES</span>
+        <h2>Tecnologías principales</h2>
+        <div class="skills">
+          <span><i class="fa-brands fa-python"></i> Python</span>
+          <span><i class="fa-brands fa-php"></i> PHP</span>
+          <span><i class="fa-solid fa-database"></i> MySQL</span>
+          <span><i class="fa-brands fa-html5"></i> HTML</span>
+          <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+          <span><i class="fa-brands fa-js"></i> JavaScript</span>
+          <span><i class="fa-brands fa-git-alt"></i> Git</span>
+          <span><i class="fa-brands fa-linux"></i> Linux</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="section glass-card reveal" id="certificaciones">
+      <span class="kicker">FORMACIÓN CONTINUA</span>
+      <h2>Certificaciones y diplomados</h2>
+      <p class="muted">Aquí integraremos tus constancias, cursos y diplomados conforme los vayamos agregando.</p>
+      <div class="cert-grid">
+        <span>Cisco Networking Academy</span>
+        <span>Microsoft Learn</span>
+        <span>Google</span>
+        <span>IBM SkillsBuild</span>
+      </div>
+    </section>
+
+    <section class="section contact glass-card reveal" id="contacto">
+      <div>
+        <span class="kicker">CONTACTO</span>
+        <h2>Hablemos de tu próximo proyecto</h2>
+        <p>Disponible para oportunidades laborales, proyectos freelance y colaboraciones.</p>
+      </div>
+      <a class="btn btn-primary" href="mailto:marco.flores.chona@gmail.com">
+        <i class="fa-solid fa-paper-plane"></i> Enviar correo
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Marco Ulises Flores Chona. Portafolio profesional.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
