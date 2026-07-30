@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#020711">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <meta name="description" content="Plataforma web para administrar clientes, compras a crédito, abonos, adeudos, reportes y tickets en una cafetería.">
+  <title>Punto de Venta para Cafetería | Marco Flores</title>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <header class="topbar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark">MF</span>
+      <span class="brand-text"><strong>MARCO FLORES</strong><small>PORTAFOLIO</small></span>
+    </a>
+    <div class="header-actions">
+      <a class="btn btn-outline" href="../index.html#proyectos"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </header>
+
+  <main class="project-detail-page">
+    <nav class="project-breadcrumb">
+      <a href="../index.html">Inicio</a><i class="fa-solid fa-chevron-right"></i>
+      <a href="../index.html#proyectos">Proyectos</a><i class="fa-solid fa-chevron-right"></i>
+      <span>Punto de Venta para Cafetería</span>
+    </nav>
+
+    <section class="project-detail-hero reveal visible">
+      <div>
+        <span class="kicker">SISTEMA WEB</span>
+        <h1>Punto de Venta para Cafetería</h1>
+        <p>Plataforma web para administrar clientes, compras a crédito, abonos, adeudos, reportes y tickets en una cafetería.</p>
+        <div class="project-meta"><span>PHP</span><span>MySQL</span><span>Bootstrap</span><span>JavaScript</span></div>
+        <div class="project-actions">
+          <a class="btn btn-primary" href="https://github.com/marco940" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> GitHub del autor
+          </a>
+          <a class="btn btn-outline" href="../index.html#contacto">
+            <i class="fa-solid fa-envelope"></i> Contacto
+          </a>
+        </div>
+      </div>
+      <div class="project-cover">
+        <i class="fa-solid fa-mug-hot"></i>
+      </div>
+    </section>
+
+    <section class="detail-grid">
+      <article class="detail-card reveal visible">
+        <h2>Problema</h2>
+        <p>El negocio necesitaba llevar de manera ordenada las compras de clientes que pagan al final de la quincena o del mes, evitando cuentas en papel y errores en los saldos.</p>
+      </article>
+      <article class="detail-card reveal visible">
+        <h2>Solución desarrollada</h2>
+        <p>Se creó un sistema con perfiles de clientes, registro de compras y abonos, historial, búsqueda rápida y generación de estados de cuenta.</p>
+      </article>
+      <article class="detail-card reveal visible">
+        <h2>Funciones principales</h2>
+        <ul><li>Gestión de clientes</li><li>Compras y adeudos</li><li>Abonos aplicados a compras antiguas</li><li>Estados de cuenta y tickets</li></ul>
+      </article>
+      <article class="detail-card reveal visible">
+        <h2>Aprendizajes</h2>
+        <ul><li>Modelado de bases de datos</li><li>Flujos de cobro</li><li>Diseño responsive</li><li>Desarrollo de una solución para un negocio real</li></ul>
+      </article>
+    </section>
+
+    <section class="detail-card gallery-section reveal visible">
+      <span class="kicker">GALERÍA</span>
+      <h2>Capturas del sistema</h2>
+      <p>Estos espacios quedarán listos para colocar las capturas reales del proyecto.</p>
+      <div class="gallery-grid">
+        <div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i>Captura principal</div></div>
+        <div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i>Proceso o módulo</div></div>
+        <div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i>Resultado final</div></div>
+      </div>
+      <div class="project-note">
+        El siguiente paso será crear el repositorio específico de este proyecto y sustituir el botón por el enlace directo al código fuente.
+      </div>
+    </section>
+  </main>
+
+  <footer><p>© <span id="year"></span> Marco Ulises Flores Chona.</p></footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

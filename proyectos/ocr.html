@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#020711">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <meta name="description" content="Sistema desarrollado para procesar imágenes y reconocer texto en placas vehiculares, identificaciones y documentos mediante visión por computadora.">
+  <title>OCR con Inteligencia Artificial | Marco Flores</title>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <header class="topbar">
+    <a href="../index.html" class="brand">
+      <span class="brand-mark">MF</span>
+      <span class="brand-text"><strong>MARCO FLORES</strong><small>PORTAFOLIO</small></span>
+    </a>
+    <div class="header-actions">
+      <a class="btn btn-outline" href="../index.html#proyectos"><i class="fa-solid fa-arrow-left"></i> Volver</a>
+      <button class="theme-btn" id="themeBtn" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </header>
+
+  <main class="project-detail-page">
+    <nav class="project-breadcrumb">
+      <a href="../index.html">Inicio</a><i class="fa-solid fa-chevron-right"></i>
+      <a href="../index.html#proyectos">Proyectos</a><i class="fa-solid fa-chevron-right"></i>
+      <span>OCR con Inteligencia Artificial</span>
+    </nav>
+
+    <section class="project-detail-hero reveal visible">
+      <div>
+        <span class="kicker">VISIÓN POR COMPUTADORA</span>
+        <h1>OCR con Inteligencia Artificial</h1>
+        <p>Sistema desarrollado para procesar imágenes y reconocer texto en placas vehiculares, identificaciones y documentos mediante visión por computadora.</p>
+        <div class="project-meta"><span>Python</span><span>OpenCV</span><span>Tesseract</span><span>OCR</span></div>
+        <div class="project-actions">
+          <a class="btn btn-primary" href="https://github.com/marco940" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> GitHub del autor
+          </a>
+          <a class="btn btn-outline" href="../index.html#contacto">
+            <i class="fa-solid fa-envelope"></i> Contacto
+          </a>
+        </div>
+      </div>
+      <div class="project-cover">
+        <i class="fa-solid fa-camera"></i>
+      </div>
+    </section>
+
+    <section class="detail-grid">
+      <article class="detail-card reveal visible">
+        <h2>Problema</h2>
+        <p>La lectura manual de placas y documentos consume tiempo y puede producir errores cuando las imágenes tienen ruido, poca iluminación o perspectivas difíciles.</p>
+      </article>
+      <article class="detail-card reveal visible">
+        <h2>Solución desarrollada</h2>
+        <p>Se implementó un flujo de preprocesamiento de imágenes con escalado, contraste, binarización y limpieza para mejorar la información antes de enviarla al motor OCR.</p>
+      </article>
+      <article class="detail-card reveal visible">
+        <h2>Funciones principales</h2>
+        <ul><li>Carga de diferentes tipos de documentos</li><li>Preprocesamiento automático</li><li>Reconocimiento y limpieza del texto</li><li>Interfaz para procesar nuevas imágenes</li></ul>
+      </article>
+      <article class="detail-card reveal visible">
+        <h2>Aprendizajes</h2>
+        <ul><li>Tratamiento de imágenes</li><li>Ajuste de parámetros OCR</li><li>Validación con expresiones regulares</li><li>Diseño de interfaces en Python</li></ul>
+      </article>
+    </section>
+
+    <section class="detail-card gallery-section reveal visible">
+      <span class="kicker">GALERÍA</span>
+      <h2>Capturas del sistema</h2>
+      <p>Estos espacios quedarán listos para colocar las capturas reales del proyecto.</p>
+      <div class="gallery-grid">
+        <div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i>Captura principal</div></div>
+        <div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i>Proceso o módulo</div></div>
+        <div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i>Resultado final</div></div>
+      </div>
+      <div class="project-note">
+        El siguiente paso será crear el repositorio específico de este proyecto y sustituir el botón por el enlace directo al código fuente.
+      </div>
+    </section>
+  </main>
+
+  <footer><p>© <span id="year"></span> Marco Ulises Flores Chona.</p></footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

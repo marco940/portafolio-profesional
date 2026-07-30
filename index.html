@@ -72,6 +72,9 @@
           <a class="btn btn-outline" href="#contacto">
             <i class="fa-solid fa-briefcase"></i> Contactarme
           </a>
+          <a class="btn btn-ghost" href="https://github.com/marco940" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> Ver GitHub
+          </a>
         </div>
 
         <div class="social-links">
@@ -119,7 +122,7 @@
           <div class="project-content">
             <div class="project-topline">
               <h3>OCR con IA</h3>
-              <button class="project-open" data-project="ocr" aria-label="Ver detalles del proyecto OCR"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+              <a class="project-open" href="proyectos/ocr.html" aria-label="Ver detalles del proyecto OCR"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <h4>Lectura de placas y documentos</h4>
             <p>Sistema inteligente para detectar y extraer texto de placas vehiculares, INE y documentos.</p>
@@ -134,7 +137,7 @@
           <div class="project-content">
             <div class="project-topline">
               <h3>Punto de Venta</h3>
-              <button class="project-open" data-project="pos" aria-label="Ver detalles del punto de venta"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+              <a class="project-open" href="proyectos/punto-venta.html" aria-label="Ver detalles del punto de venta"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <h4>Cafetería Mil Aromas</h4>
             <p>Gestión de clientes, compras, abonos, estados de cuenta, reportes y tickets térmicos.</p>
@@ -149,7 +152,7 @@
           <div class="project-content">
             <div class="project-topline">
               <h3>Retroalimentación</h3>
-              <button class="project-open" data-project="feedback" aria-label="Ver detalles del sistema de retroalimentación"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+              <a class="project-open" href="proyectos/retroalimentacion.html" aria-label="Ver detalles del sistema de retroalimentación"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <h4>Sistema anónimo</h4>
             <p>Plataforma para recibir opiniones anónimas y consultarlas desde un panel administrativo.</p>
@@ -164,7 +167,7 @@
           <div class="project-content">
             <div class="project-topline">
               <h3>Robot 2WD</h3>
-              <button class="project-open" data-project="robot" aria-label="Ver detalles del robot 2WD"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+              <a class="project-open" href="proyectos/robot-2wd.html" aria-label="Ver detalles del robot 2WD"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
             </div>
             <h4>Control por Bluetooth</h4>
             <p>Robot móvil controlado desde una aplicación mediante Bluetooth, Arduino UNO y L298N.</p>
@@ -266,34 +269,6 @@
   <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
-
-  <div class="project-modal" id="projectModal" aria-hidden="true">
-    <div class="modal-backdrop" data-close-modal></div>
-    <article class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" data-close-modal aria-label="Cerrar">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <span class="kicker" id="modalKicker">PROYECTO</span>
-      <h2 id="modalTitle"></h2>
-      <p id="modalDescription"></p>
-      <div class="modal-columns">
-        <div>
-          <h3>Funciones principales</h3>
-          <ul id="modalFeatures"></ul>
-        </div>
-        <div>
-          <h3>Tecnologías</h3>
-          <div class="tags" id="modalTags"></div>
-        </div>
-      </div>
-      <div class="modal-actions">
-        <a class="btn btn-primary" href="https://github.com/marco940" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-github"></i> Ver GitHub
-        </a>
-        <button class="btn btn-outline" data-close-modal>Cerrar</button>
-      </div>
-    </article>
-  </div>
 
   <script src="js/main.js"></script>
 </body>
