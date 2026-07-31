@@ -35,3 +35,9 @@ El portafolio está alojado mediante GitHub Pages.
 
 **Marco Ulises Flores Chona**  
 Ingeniero en Sistemas Inteligentes · Desarrollador FullStack · Docente de IA y Programación
+
+
+## Evidencias integradas
+
+- Galería real del Punto de Venta para Cafetería
+- Galería real del Sistema OCR Inteligente

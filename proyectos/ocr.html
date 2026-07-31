@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
 
-  <meta name="description" content="Sistema desarrollado para procesar imágenes y reconocer texto en placas vehiculares, identificaciones y documentos mediante visión por computadora.">
+  <meta name="description" content="Aplicación de escritorio desarrollada en Python para reconocer texto en placas vehiculares, identificaciones, documentos, tickets e imágenes mediante visión por computadora y OCR.">
   <title>OCR con Inteligencia Artificial | Marco Flores</title>
 </head>
 <body>
@@ -38,7 +38,7 @@
       <div>
         <span class="kicker">VISIÓN POR COMPUTADORA</span>
         <h1>OCR con Inteligencia Artificial</h1>
-        <p>Sistema desarrollado para procesar imágenes y reconocer texto en placas vehiculares, identificaciones y documentos mediante visión por computadora.</p>
+        <p>Aplicación de escritorio desarrollada en Python para reconocer texto en placas vehiculares, identificaciones, documentos, tickets e imágenes mediante visión por computadora y OCR.</p>
         <div class="project-meta"><span>Python</span><span>OpenCV</span><span>Tesseract</span><span>OCR</span></div>
         <div class="project-actions">
           <a class="btn btn-primary" href="https://github.com/marco940" target="_blank" rel="noopener noreferrer">
@@ -49,8 +49,9 @@
           </a>
         </div>
       </div>
-      <div class="project-cover">
-        <i class="fa-solid fa-camera"></i>
+      <div class="project-cover project-cover-image">
+        <img src="../img/proyectos/ocr/interfaz-principal.webp"
+             alt="Interfaz principal del Sistema OCR Inteligente">
       </div>
     </section>
 
@@ -74,16 +75,59 @@
     </section>
 
     <section class="detail-card gallery-section reveal visible">
-      <span class="kicker">GALERÍA</span>
-      <h2>Capturas del sistema</h2>
-      <p>Estos espacios quedarán listos para colocar las capturas reales del proyecto.</p>
-      <div class="gallery-grid">
-        <div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i>Captura principal</div></div>
-        <div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i>Proceso o módulo</div></div>
-        <div class="gallery-placeholder"><div><i class="fa-regular fa-image"></i>Resultado final</div></div>
+      <span class="kicker">CASO DE ESTUDIO</span>
+      <h2>Flujo completo del reconocimiento</h2>
+      <p>
+        La galería muestra el proceso desde la selección de la imagen hasta la detección
+        final del texto, incluyendo el modo de recorte manual cuando se requiere una
+        selección más precisa.
+      </p>
+
+      <div class="ocr-flow">
+        <div><span>01</span><strong>Cargar imagen</strong></div>
+        <i class="fa-solid fa-arrow-right"></i>
+        <div><span>02</span><strong>Elegir tipo de OCR</strong></div>
+        <i class="fa-solid fa-arrow-right"></i>
+        <div><span>03</span><strong>Procesar con IA</strong></div>
+        <i class="fa-solid fa-arrow-right"></i>
+        <div><span>04</span><strong>Validar resultado</strong></div>
       </div>
+
+      <div class="project-gallery">
+        <a class="gallery-item gallery-featured" href="../img/proyectos/ocr/interfaz-principal.webp" target="_blank">
+          <img src="../img/proyectos/ocr/interfaz-principal.webp" alt="Interfaz principal del OCR">
+          <span><strong>Interfaz principal</strong><small>Selección de placa, INE, documento, ticket o imagen general.</small></span>
+        </a>
+
+        <a class="gallery-item" href="../img/proyectos/ocr/imagen-cargada.webp" target="_blank">
+          <img src="../img/proyectos/ocr/imagen-cargada.webp" alt="Imagen de placa cargada en el sistema">
+          <span><strong>Imagen cargada</strong><small>Vista previa antes de iniciar el procesamiento OCR.</small></span>
+        </a>
+
+        <a class="gallery-item" href="../img/proyectos/ocr/resultado-automatico.webp" target="_blank">
+          <img src="../img/proyectos/ocr/resultado-automatico.webp" alt="Resultado automático de reconocimiento de placa">
+          <span><strong>Detección automática</strong><small>Resultado OCR, formato detectado y nivel estimado de confianza.</small></span>
+        </a>
+
+        <a class="gallery-item" href="../img/proyectos/ocr/recorte-manual.webp" target="_blank">
+          <img src="../img/proyectos/ocr/recorte-manual.webp" alt="Ventana de recorte manual del OCR">
+          <span><strong>Recorte manual</strong><small>Herramienta auxiliar para mejorar la precisión en imágenes complejas.</small></span>
+        </a>
+
+        <a class="gallery-item" href="../img/proyectos/ocr/seleccion-area.webp" target="_blank">
+          <img src="../img/proyectos/ocr/seleccion-area.webp" alt="Selección manual del área de la placa">
+          <span><strong>Selección del área</strong><small>Delimitación exacta de la región donde se encuentra el texto.</small></span>
+        </a>
+
+        <a class="gallery-item gallery-featured" href="../img/proyectos/ocr/resultado-final.webp" target="_blank">
+          <img src="../img/proyectos/ocr/resultado-final.webp" alt="Resultado final del reconocimiento manual">
+          <span><strong>Resultado final</strong><small>Texto reconocido después del recorte manual y listo para copiar.</small></span>
+        </a>
+      </div>
+
       <div class="project-note">
-        El siguiente paso será crear el repositorio específico de este proyecto y sustituir el botón por el enlace directo al código fuente.
+        El proyecto combina preprocesamiento de imágenes, Tesseract OCR, validación de texto
+        y herramientas de selección manual para obtener mejores resultados.
       </div>
     </section>
   </main>
