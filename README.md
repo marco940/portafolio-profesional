@@ -41,3 +41,5 @@ Ingeniero en Sistemas Inteligentes · Desarrollador FullStack · Docente de IA y
 
 - Galería real del Punto de Venta para Cafetería
 - Galería real del Sistema OCR Inteligente
+
+- Galería real del Sistema de Retroalimentación Anónima

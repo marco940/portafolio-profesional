@@ -919,3 +919,46 @@ body.light-theme .gallery-item {
     justify-self: center;
   }
 }
+
+
+/* Flujo visual del sistema de retroalimentación */
+.feedback-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+  margin: 26px 0 30px;
+}
+.feedback-flow div {
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(141,92,255,.055);
+}
+.feedback-flow span {
+  color: var(--cyan);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.feedback-flow strong {
+  color: var(--text);
+  line-height: 1.35;
+}
+.feedback-flow > i {
+  color: var(--purple);
+}
+@media (max-width: 900px) {
+  .feedback-flow {
+    grid-template-columns: 1fr;
+  }
+  .feedback-flow > i {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+}
